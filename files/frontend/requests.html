@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Requests — SwapBoard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/tokens.css" />
+<link rel="stylesheet" href="/styles/header.css" />
+<link rel="stylesheet" href="/styles/layout.css" />
+<link rel="stylesheet" href="/styles/cards.css" />
+<link rel="stylesheet" href="/styles/buttons.css" />
+<link rel="stylesheet" href="/styles/modal.css" />
+<link rel="stylesheet" href="/styles/forms.css" />
+<link rel="stylesheet" href="/styles/utilities.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="/" class="logo">
+        <span class="logo__mark">↔</span>
+        <span class="logo__name">SwapBoard</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/index.html" class="site-nav__link">Listings</a>
+        <a href="/requests.html" class="site-nav__link site-nav__link--active">Requests</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page__hero page__hero--requests">
+      <h1 class="page__title">What do students need?</h1>
+      <p class="page__subtitle">Open requests from students looking for specific items.</p>
+      <button id="btn-new-request" class="btn btn--primary">+ Post a Request</button>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar__filters toolbar__filters--solo">
+        <select id="filter-category" class="filter-select">
+          <option value="">All Categories</option>
+          <option value="Academic">📚 Academic</option>
+          <option value="Furniture">🪑 Furniture</option>
+          <option value="Clothing">👕 Clothing</option>
+          <option value="Electronics">💻 Electronics</option>
+          <option value="Other">📦 Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="requests-grid" class="card-grid"></div>
+    <p id="requests-empty" class="empty-state" hidden>
+      No open requests right now — post one to let people know what you need!
+    </p>
+  </main>
+
+  <script type="module" src="/pages/requests.js"></script>
+</body>
+</html>

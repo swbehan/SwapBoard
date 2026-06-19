@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SwapBoard — Campus Marketplace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles/tokens.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/cards.css" />
+  <link rel="stylesheet" href="/styles/buttons.css" />
+  <link rel="stylesheet" href="/styles/modal.css" />
+  <link rel="stylesheet" href="/styles/forms.css" />
+  <link rel="stylesheet" href="/styles/utilities.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="/" class="logo">
+        <span class="logo__mark">↔</span>
+        <span class="logo__name">SwapBoard</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/index.html" class="site-nav__link site-nav__link--active">Listings</a>
+        <a href="/requests.html" class="site-nav__link">Requests</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page__hero">
+      <h1 class="page__title">What's on campus?</h1>
+      <p class="page__subtitle">Browse items students are selling, swapping, or giving away.</p>
+      <button id="btn-new-listing" class="btn btn--primary">+ Post a Listing</button>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar__search">
+        <input id="search-input" type="search" placeholder="Search listings…" class="search-input" />
+      </div>
+      <div class="toolbar__filters">
+        <select id="filter-category" class="filter-select">
+          <option value="">All Categories</option>
+          <option value="Academic">📚 Academic</option>
+          <option value="Furniture">🪑 Furniture</option>
+          <option value="Clothing">👕 Clothing</option>
+          <option value="Electronics">💻 Electronics</option>
+          <option value="Other">📦 Other</option>
+        </select>
+        <select id="filter-type" class="filter-select">
+          <option value="">All Types</option>
+          <option value="sell">For Sale</option>
+          <option value="swap">Swap</option>
+          <option value="free">Free</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="listings-grid" class="card-grid"></div>
+    <p id="listings-empty" class="empty-state" hidden>
+      No listings match your filters. Be the first to post one!
+    </p>
+  </main>
+
+  <script type="module" src="/pages/listings.js"></script>
+</body>
+</html>

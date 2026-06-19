@@ -1,0 +1,127 @@
+/* cards style sheet */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--navy);
+}
+
+.card--request {
+  border-left: 4px solid var(--teal);
+}
+
+.card__badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  width: fit-content;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.card__badge--sell {
+  background: var(--red-light);
+  color: var(--red);
+}
+
+.card__badge--swap {
+  background: var(--navy-light);
+  color: var(--navy);
+}
+
+.card__badge--free {
+  background: #ecfdf5;
+  color: #065f46;
+}
+
+.card__badge--budget {
+  background: var(--amber-light);
+  color: var(--amber);
+}
+
+.card__category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.card__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.card__desc {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+
+.card__contact {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 65%;
+}
+
+.card__time {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card__actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .card__actions {
+    gap: 0.4rem;
+  }
+}

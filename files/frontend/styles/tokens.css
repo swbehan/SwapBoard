@@ -1,0 +1,46 @@
+/* design tokens style sheet  */
+
+:root {
+  --canvas: #F2F4F8;
+  --ink: #0A0A0A;
+  --ink-soft: #2C2C2C;
+  --ink-muted: #6B7280;
+  --navy: #0D1B3E;
+  --navy-light: #E8EBF4;
+  --red: #CC1B1B;
+  --red-light: #FDEAEA;
+  --teal: #1A5276;
+  --teal-light: #EAF2F8;
+  --amber: #B7770D;
+  --amber-light: #FEF9E7;
+  --white: #FFFFFF;
+  --border: #D1D5DB;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.14);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.2);
+  --radius: 10px;
+  --radius-sm: 6px;
+  --font-display: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+}
