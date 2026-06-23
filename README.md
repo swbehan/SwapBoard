@@ -7,6 +7,7 @@ A campus marketplace where students buy, sell, swap, and request everyday items:
 
 🌐 **Live Site:** [https://swapboard.onrender.com](https://swapboard.onrender.com)
 🎥 **Demo Video:** [https://youtu.be/jDgG5kHXXsk](https://youtu.be/jDgG5kHXXsk)
+📊 **Slides:** [https://docs.google.com/presentation/d/1Ie0neoNE7AM9hBKc2bQsEPvH5E_QT_Ps/edit?usp=sharing&ouid=105784335161798464110&rtpof=true&sd=true]
 📁 **Design Mockups:** Found in the [design-mockups](./design-mockups) folder
 📄 **Design Document:** [DESIGN.md](./DESIGN.md)
 
