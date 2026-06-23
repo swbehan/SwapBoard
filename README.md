@@ -2,24 +2,13 @@
 
 A campus marketplace where students buy, sell, swap, and request everyday items: textbooks, furniture, clothes, and electronics.
 
-Authors: Tony Zhang, Celine Isaacs
-<<<<<<< HEAD
-Course:** CS5610 Web Development, 
-Northeastern University 
-([class link](https://northeastern.instructure.com/courses/249954))
-=======
-Course:** CS5610 Web Development, Northeastern University ([class link](https://northeastern.instructure.com/courses/249954))
->>>>>>> 851fc0784c262272e270c26b981438d654daaefb
+**Authors:** Tony Zhang, Celine Isaacs
+**Course:** CS5610 Web Development, Northeastern University ([class link](https://northeastern.instructure.com/courses/249954))
 
-
-Live Site:[https://swapboard.onrender.com](https://swapboard.onrender.com)
-Demo Video: [https://youtu.be/jDgG5kHXXsk](https://youtu.be/jDgG5kHXXsk)
-<<<<<<< HEAD
-Design mockups  found in the [design-mockups](./design-mockups) folder
-Design Document: [DESIGN.md](./DESIGN.md)
-=======
-Design mockups  found in the [design-mockups](./design-mockups) folder.
->>>>>>> 851fc0784c262272e270c26b981438d654daaefb
+🌐 **Live Site:** [https://swapboard.onrender.com](https://swapboard.onrender.com)
+🎥 **Demo Video:** [https://youtu.be/jDgG5kHXXsk](https://youtu.be/jDgG5kHXXsk)
+📁 **Design Mockups:** Found in the [design-mockups](./design-mockups) folder
+📄 **Design Document:** [DESIGN.md](./DESIGN.md)
 
 ![SwapBoard listings page](screenshot.png)
 
@@ -73,6 +62,7 @@ SwapBoard/
 │   ├── eslint.config.js
 │   ├── .gitignore
 │   └── package.json
+├── DESIGN.md
 ├── README.md
 ├── LICENSE
 └── screenshot.png
@@ -106,7 +96,5 @@ Categories: Academic, Furniture, Clothing, Electronics, Other.
 Fields: `title`*, `category`*, `budget`, `description`, `contact`*, `fulfilled`.
 
 ## Technical Independence
-
-The `listings` and `requests` collections are fully independent. Each defines its own copy of the category list, has its own router and validation, and neither imports from the other.
 
 The `listings` and `requests` collections are fully independent. Each has its own router, validation, data shape, and copy of the category list, and neither imports from the other.
