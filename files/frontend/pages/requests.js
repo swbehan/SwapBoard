@@ -1,8 +1,12 @@
 import { requestsAPI } from "../js/api.js";
 import {
-  CATEGORIES, CATEGORY_ICONS,
-  formatDate, showToast,
-  buildCategoryOptions, openModal, closeModal,
+  CATEGORIES,
+  CATEGORY_ICONS,
+  formatDate,
+  showToast,
+  buildCategoryOptions,
+  openModal,
+  closeModal,
 } from "../js/utils.js";
 
 let currentCategory = "";
@@ -46,15 +50,21 @@ async function loadRequests() {
     grid.appendChild(card);
   });
 
-  grid.querySelectorAll("[data-fulfill]").forEach((btn) =>
-    btn.addEventListener("click", () => fulfillRequest(btn.dataset.fulfill))
-  );
-  grid.querySelectorAll("[data-edit]").forEach((btn) =>
-    btn.addEventListener("click", () => openEditModal(btn.dataset.edit))
-  );
-  grid.querySelectorAll("[data-delete]").forEach((btn) =>
-    btn.addEventListener("click", () => deleteRequest(btn.dataset.delete))
-  );
+  grid
+    .querySelectorAll("[data-fulfill]")
+    .forEach((btn) =>
+      btn.addEventListener("click", () => fulfillRequest(btn.dataset.fulfill))
+    );
+  grid
+    .querySelectorAll("[data-edit]")
+    .forEach((btn) =>
+      btn.addEventListener("click", () => openEditModal(btn.dataset.edit))
+    );
+  grid
+    .querySelectorAll("[data-delete]")
+    .forEach((btn) =>
+      btn.addEventListener("click", () => deleteRequest(btn.dataset.delete))
+    );
 }
 
 function requestFormHtml(r = {}) {
@@ -96,19 +106,21 @@ function openCreateModal() {
     </form>
   `);
 
-  document.getElementById("request-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.target));
-    if (!data.budget) delete data.budget;
-    try {
-      await requestsAPI.create(data);
-      closeModal();
-      showToast("Request posted!");
-      loadRequests();
-    } catch (err) {
-      showToast(err.message, "error");
-    }
-  });
+  document
+    .getElementById("request-form")
+    .addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target));
+      if (!data.budget) delete data.budget;
+      try {
+        await requestsAPI.create(data);
+        closeModal();
+        showToast("Request posted!");
+        loadRequests();
+      } catch (err) {
+        showToast(err.message, "error");
+      }
+    });
 }
 
 async function openEditModal(id) {
@@ -123,19 +135,21 @@ async function openEditModal(id) {
     </form>
   `);
 
-  document.getElementById("edit-request-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.target));
-    if (!data.budget) data.budget = null;
-    try {
-      await requestsAPI.update(id, data);
-      closeModal();
-      showToast("Request updated!");
-      loadRequests();
-    } catch (err) {
-      showToast(err.message, "error");
-    }
-  });
+  document
+    .getElementById("edit-request-form")
+    .addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target));
+      if (!data.budget) data.budget = null;
+      try {
+        await requestsAPI.update(id, data);
+        closeModal();
+        showToast("Request updated!");
+        loadRequests();
+      } catch (err) {
+        showToast(err.message, "error");
+      }
+    });
 }
 
 async function fulfillRequest(id) {
@@ -171,7 +185,9 @@ function escHtml(str) {
 document.addEventListener("DOMContentLoaded", () => {
   loadRequests();
 
-  document.getElementById("btn-new-request").addEventListener("click", openCreateModal);
+  document
+    .getElementById("btn-new-request")
+    .addEventListener("click", openCreateModal);
 
   const catFilter = document.getElementById("filter-category");
   catFilter.addEventListener("change", () => {

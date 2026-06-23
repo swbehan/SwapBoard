@@ -17,8 +17,10 @@ export const listingsAPI = {
     return request(`/listings${qs ? "?" + qs : ""}`);
   },
   getOne: (id) => request(`/listings/${id}`),
-  create: (body) => request("/listings", { method: "POST", body: JSON.stringify(body) }),
-  update: (id, body) => request(`/listings/${id}`, { method: "PATCH", body: JSON.stringify(body) }),
+  create: (body) =>
+    request("/listings", { method: "POST", body: JSON.stringify(body) }),
+  update: (id, body) =>
+    request(`/listings/${id}`, { method: "PATCH", body: JSON.stringify(body) }),
   delete: (id) => request(`/listings/${id}`, { method: "DELETE" }),
 };
 
@@ -29,8 +31,14 @@ export const requestsAPI = {
     return request(`/requests${qs ? "?" + qs : ""}`);
   },
   getOne: (id) => request(`/requests/${id}`),
-  create: (body) => request("/requests", { method: "POST", body: JSON.stringify(body) }),
-  update: (id, body) => request(`/requests/${id}`, { method: "PATCH", body: JSON.stringify(body) }),
+  create: (body) =>
+    request("/requests", { method: "POST", body: JSON.stringify(body) }),
+  update: (id, body) =>
+    request(`/requests/${id}`, { method: "PATCH", body: JSON.stringify(body) }),
   delete: (id) => request(`/requests/${id}`, { method: "DELETE" }),
-  fulfill: (id) => request(`/requests/${id}`, { method: "PATCH", body: JSON.stringify({ fulfilled: true }) }),
+  fulfill: (id) =>
+    request(`/requests/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ fulfilled: true }),
+    }),
 };

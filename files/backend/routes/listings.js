@@ -5,7 +5,13 @@ import { getDB } from "../db/connection.js";
 const router = Router();
 const COLLECTION = "listings";
 
-const CATEGORIES = ["Academic", "Furniture", "Clothing", "Electronics", "Other"];
+const CATEGORIES = [
+  "Academic",
+  "Furniture",
+  "Clothing",
+  "Electronics",
+  "Other",
+];
 const TYPES = ["sell", "swap", "free"];
 
 function priceFor(type, price) {

@@ -1,4 +1,10 @@
-export const CATEGORIES = ["Academic", "Furniture", "Clothing", "Electronics", "Other"];
+export const CATEGORIES = [
+  "Academic",
+  "Furniture",
+  "Clothing",
+  "Electronics",
+  "Other",
+];
 
 export const LISTING_TYPES = [
   { value: "sell", label: "For Sale" },
@@ -50,7 +56,8 @@ export function showToast(message, type = "success") {
 
 export function buildCategoryOptions(selected = "") {
   return CATEGORIES.map(
-    (c) => `<option value="${c}" ${c === selected ? "selected" : ""}>${CATEGORY_ICONS[c]} ${c}</option>`
+    (c) =>
+      `<option value="${c}" ${c === selected ? "selected" : ""}>${CATEGORY_ICONS[c]} ${c}</option>`
   ).join("");
 }
 
@@ -65,7 +72,9 @@ export function openModal(html) {
   overlay.innerHTML = `<div class="modal">${html}<button class="modal__close" aria-label="Close">✕</button></div>`;
   overlay.classList.add("modal-overlay--visible");
   overlay.querySelector(".modal__close").addEventListener("click", closeModal);
-  overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) closeModal();
+  });
   document.body.style.overflow = "hidden";
 }
 

@@ -60,12 +60,18 @@ async function loadListings() {
       grid.appendChild(card);
     }
 
-    grid.querySelectorAll("[data-edit]").forEach((btn) =>
-      btn.addEventListener("click", () => openEditModal(btn.dataset.edit, items))
-    );
-    grid.querySelectorAll("[data-delete]").forEach((btn) =>
-      btn.addEventListener("click", () => removeListing(btn.dataset.delete))
-    );
+    grid
+      .querySelectorAll("[data-edit]")
+      .forEach((btn) =>
+        btn.addEventListener("click", () =>
+          openEditModal(btn.dataset.edit, items)
+        )
+      );
+    grid
+      .querySelectorAll("[data-delete]")
+      .forEach((btn) =>
+        btn.addEventListener("click", () => removeListing(btn.dataset.delete))
+      );
   } catch (err) {
     grid.innerHTML = "";
     showToast(err.message, "error");
@@ -92,7 +98,8 @@ function formHtml(item = {}) {
         <select name="type" required>
           <option value="">Select...</option>
           ${LISTING_TYPES.map(
-            (t) => `<option value="${t.value}" ${t.value === item.type ? "selected" : ""}>${t.label}</option>`
+            (t) =>
+              `<option value="${t.value}" ${t.value === item.type ? "selected" : ""}>${t.label}</option>`
           ).join("")}
         </select>
       </div>
@@ -193,7 +200,9 @@ async function removeListing(id) {
 document.addEventListener("DOMContentLoaded", () => {
   loadListings();
 
-  document.getElementById("btn-new-listing").addEventListener("click", openCreateModal);
+  document
+    .getElementById("btn-new-listing")
+    .addEventListener("click", openCreateModal);
 
   document.getElementById("filter-category").addEventListener("change", (e) => {
     filters.category = e.target.value;

@@ -14,7 +14,9 @@
   box-shadow: var(--shadow-md);
   z-index: 1000;
   opacity: 0;
-  transition: opacity 0.25s, transform 0.25s;
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
   white-space: nowrap;
 }
 

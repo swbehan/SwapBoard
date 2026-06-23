@@ -36,7 +36,9 @@
   color: var(--ink);
   background: var(--white);
   outline: none;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
   resize: vertical;
 }
 

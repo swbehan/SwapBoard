@@ -54,7 +54,9 @@
   text-decoration: none;
   padding: 0.4rem 0.9rem;
   border-radius: 4px;
-  transition: color 0.15s, background 0.15s;
+  transition:
+    color 0.15s,
+    background 0.15s;
 }
 
 .site-nav__link:hover {

@@ -12,7 +12,10 @@
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  transition:
+    background 0.15s,
+    transform 0.1s,
+    box-shadow 0.15s;
   white-space: nowrap;
 }
 
