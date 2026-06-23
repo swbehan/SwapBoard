@@ -3,15 +3,23 @@
 A campus marketplace where students buy, sell, swap, and request everyday items: textbooks, furniture, clothes, and electronics.
 
 Authors: Tony Zhang, Celine Isaacs
+<<<<<<< HEAD
 Course:** CS5610 Web Development, 
 Northeastern University 
 ([class link](https://northeastern.instructure.com/courses/249954))
+=======
+Course:** CS5610 Web Development, Northeastern University ([class link](https://northeastern.instructure.com/courses/249954))
+>>>>>>> 851fc0784c262272e270c26b981438d654daaefb
 
 
 Live Site:[https://swapboard.onrender.com](https://swapboard.onrender.com)
 Demo Video: [https://youtu.be/jDgG5kHXXsk](https://youtu.be/jDgG5kHXXsk)
+<<<<<<< HEAD
 Design mockups  found in the [design-mockups](./design-mockups) folder
 Design Document: [DESIGN.md](./DESIGN.md)
+=======
+Design mockups  found in the [design-mockups](./design-mockups) folder.
+>>>>>>> 851fc0784c262272e270c26b981438d654daaefb
 
 ![SwapBoard listings page](screenshot.png)
 
