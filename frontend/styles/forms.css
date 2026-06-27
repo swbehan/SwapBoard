@@ -6,6 +6,7 @@
   gap: 1rem;
 }
 
+/* Maybe boostraps row would have been easier here? Less calculation on your part  */
 .form__row {
   display: grid;
   grid-template-columns: 1fr 1fr;
